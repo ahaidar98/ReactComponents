@@ -1,3 +1,26 @@
+/*
+STYLES:
+#dash .input-group-text,
+#dash .dashSearch {
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+}
+
+.dashSearch::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #AAB4BE;
+    opacity: 1; /* Firefox */
+}
+
+.dashSearch:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #AAB4BE;
+}
+
+.dashSearch::-ms-input-placeholder { /* Microsoft Edge */
+    color: #AAB4BE;
+}
+*/
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
