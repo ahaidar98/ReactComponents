@@ -59,20 +59,20 @@ export default function Dropdown({ classNameWrapper, titleClassName, title, list
     useOutsideAlerter(wrapperRef);
 
     return (
-        <>
-            <div onClick={() => setIsOpen(!isOpen)} className={`${classNameWrapper} dropdown pointer mx-2`} ref={wrapperRef}>
-                <div className={titleClassName}>
-                    {title}
-                    <FontAwesomeIcon className="ms-2" icon={isOpen ? faAngleUp : faAngleDown} size="md" />
-                </div>
-            </div>
-            {isOpen && (
-                <ul className="dropdownList p-3 text-start">
-                    {list.map((item, i) => {
-                        return <li key={i} onClick={item.onClick} className="dropdownListItem">{item.title}</li>;
-                    })}
-                </ul>
-            )}
-        </>
+       <div ref={wrapperRef}>
+           <div onClick={() => setIsOpen(!isOpen)} className={`${classNameWrapper} dropdown pointer mx-2`}>
+               <div className={titleClassName}>
+                   {title}
+                   <FontAwesomeIcon className="ms-2" icon={isOpen ? faAngleUp : faAngleDown} size="md" />
+               </div>
+           </div>
+           {isOpen && (
+               <ul className="dropdownList p-3 text-start">
+                   {list.map((item, i) => {
+                       return <li key={i} onClick={item.onClick} className="dropdownListItem">{item.title}</li>;
+                   })}
+               </ul>
+           )}
+       </div>
     );
 }
