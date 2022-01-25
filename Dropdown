@@ -1,0 +1,55 @@
+/*
+.dropdownList {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 25px;
+}
+
+.dropdownListItem {
+    list-style: none;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0, .4);
+}
+
+.dropdownListItem:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+*/
+
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import './styles.css';
+
+export default function Dropdown ({ classNameWrapper, onClick, titleClassName, title, isOpen, list }) {
+    console.log(list)
+    return (
+        <>
+            <div onClick={onClick} className={`${classNameWrapper} dropdown pointer mx-2`}>
+                <div className={titleClassName}>
+                    {title}
+                    <FontAwesomeIcon className="ms-2" icon={isOpen ? faAngleUp : faAngleDown} size="md" />
+                </div>
+            </div>
+            {isOpen && (
+                <ul className="dropdownList p-3 text-start"> 
+                    {list.map((item, i) => {
+                     x   return <li key={i} onClick={item.onClick} className="dropdownListItem">{item.title}</li>;
+                    })}
+                </ul>
+            )}
+        </>
+    );
+}
