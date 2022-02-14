@@ -1,0 +1,38 @@
+/*
+    .vert-center-container {
+        position: relative;
+    }
+       .vert-center-text {
+        color: #f1f1f1;
+    }
+*/
+
+function onPlayPauseVideo() {
+    var video = document.getElementById("mainVideo");
+    var btn = document.getElementById("playPauseBtn");
+
+    if (video.paused) {
+        video.play();
+        btn.innerHTML = "Pause";
+    } else {
+        video.pause();
+        btn.innerHTML = "Play";
+    }
+}
+        
+
+<section>
+  <div class="row">
+    <div class="col-xs-12 vert-center-container">
+      <video id="mainVideo" style="width:100%" class="img-responsive" playsinline autoplay muted loop>
+          <source src="./assets/mainVideo.mp4" type="video/mp4">
+      </video>
+      <div class="vert-center-text">
+          <h1>Lorem ipsum</h1>
+          <hr />
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+      </div>
+      <!--<button id="playPauseBtn" class="button videoBtn">Play</button>-->
+    </div>
+  </div>
+</section>
