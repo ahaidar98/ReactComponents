@@ -1,0 +1,19 @@
+#lostPage .button:hover {
+    color: white !important;
+}
+
+.header404Txt {
+    font-size: 6rem;
+}
+
+.boxCotainerWrapper {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 3rem;
+    border-radius: 5px;
+}
+
+.boxContainerLogoWrapper {
+    text-align: center;
+    margin-top: 3rem;
+}
