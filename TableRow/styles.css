@@ -1,0 +1,7 @@
+.controls {
+    visibility: hidden;
+}
+
+tr:hover .controls {
+    visibility: visible;
+}
