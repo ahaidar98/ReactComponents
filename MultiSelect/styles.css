@@ -1,0 +1,89 @@
+.multiSelect {
+    min-height: calc(3.5rem + 2px);
+    position: relative;
+    cursor: pointer;
+    padding-top: .75rem;
+    line-height: 1.25;
+    border: none !important;
+    border-bottom: 2px solid #f1c40f !important;
+    border-radius: 5px 5px 0 0 !important;
+    width: 100%;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    appearance: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.multiSelectError {
+    border-color: var(--error) !important;
+}
+
+.multiSelectDDIcon {
+    padding-right: 0.75rem;
+    padding-top: 0.125rem
+}
+
+.multiSelectPlaceHolder {
+    padding-left: 0.75rem;
+    padding-top: 0.125rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.multiSelectOptPill {
+    border: 1px solid #f1c40f !important;
+    padding: 0.35rem 1rem;
+    margin: 0 0.5rem .625rem 0.5rem;
+    border-radius: 5px;
+    background-color: transparent
+}
+
+.multiSelectOptPillX {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin-left: .75rem;
+}
+
+.multiSelectDdOpen {
+    border: 1px solid #f1c40f !important;
+    border-top: none;
+    padding: 1rem;
+    z-index: 1000;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+.multiSelectOptionsWrapper {
+    margin: 0;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    max-height: 150px;
+}
+
+.multiSelectListItem,
+.n{
+    padding: 0.5rem .75rem;
+    font-size: 1rem;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.multiSelectListItem:hover  {
+    background-color: var(--ltGray);
+    opacity: 1;
+}
+
+.multiSelectListItem:first-child {
+    padding-top: 0px;
+}
+
+.multiSelectListItem:last-child {
+    padding-bottom: 0px;
+}
