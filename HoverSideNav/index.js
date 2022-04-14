@@ -1,3 +1,50 @@
+/*
+     in wrapper component:
+     
+     export default function DashboardLayout({ props }) {
+    const dispatch = useDispatch(),
+        params = useParams(),
+        [state, setState] = useState({
+            activeNav: '',
+            isSideNavExpanded: false,
+            contentWidth: 'col-11',
+            sideNavWidth: 'col-1',
+        });
+
+    const onHandleSideBarHover = () => {
+        if (!state.isSideNavExpanded) {
+            console.log("opening sidebar");
+            setState({ ...state, sideNavWidth: 'col-2', contentWidth: 'col-10', isSideNavExpanded: true })
+        } else {
+            console.log("closing sidebar");
+            setState({ ...state, sideNavWidth: 'col-1', contentWidth: 'col-11', isSideNavExpanded: false })
+        }
+    }
+
+    useEffect(() => {
+        setState({ ...state, activeNav: params?.labName });
+    }, [params])
+
+    return (
+        <div className="container-fluid p-0">
+            <div className="row g-0">
+                <div className={state.sideNavWidth} onMouseOver={onHandleSideBarHover} onMouseOut={onHandleSideBarHover}>
+                    <SideNav
+                        activeNavLink={state.activeNav}
+                        isSideNavExpanded={state.isSideNavExpanded}
+                        width={state.sideNavWidth}
+                    />
+                </div>
+                <div className={`${state.contentWidth}`} style={{ transition: 0.35 }}>
+                    <Outlet />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+*/
+
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
