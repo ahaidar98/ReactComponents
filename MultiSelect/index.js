@@ -1,55 +1,13 @@
-/*
-onHandleMultiSelectOptionClick = (label, value) => {
-        let tempArr = [...this.state.optionsSelected],
-            orginalOptArr = [...this.state.list];
-        if (this.state.optionsSelected.some((opt) => opt.value === value)) {
-            tempArr = tempArr.filter((opt) => opt.value !== value);
-            orginalOptArr.push({ label, value });
-        } else {
-            tempArr.push({ label, value });
-            orginalOptArr = orginalOptArr.filter((opt) => opt.value !== value);
-            if (this.state.optionsSelectedError) {
-                this.setState({ optionsSelectedError: false })
-            }
-        }
-
-        this.setState({ optionsSelected: tempArr, list: orginalOptArr });
-    }
-
-    onHandleMultiSelectSearchChange = (value) => {
-        let allOptions = [...this.state.listDupe];
-
-        if (this.state.listDupe.length !== this.state.list.length) {
-            allOptions = allOptions.filter((opt1) => {
-                return !this.state.optionsSelected.find((opt2) => {
-                    return opt1.value === opt2.value
-                });
-            });
-        }
-
-        const filteredData = allOptions.filter((opt) => {
-            console.log(opt.value.toLowerCase(), value.toLowerCase(), opt.value.toLowerCase().includes(value.toLowerCase()));
-            return opt.value.toLowerCase().includes(value.toLowerCase())
-        });
-
-        if (value === '') {
-            this.setState({ list: this.state.listDupe })
-        } else {
-            this.setState({ list: filteredData })
-        }
-    }
-*/
-
 import React, { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
-import { faCircleXmark } from '@fortawesome/free-regular-svg-icons';
 import './styles.css';
 
 export default function MultiSelect({ classNameWrapper, titleClassName, onClick, placeholder, values, arrayOfOptions, onSearchChange, isError }) {
     const [state, setState] = useState({
         searchOptValue: '',
         isOpen: false,
+        noResults: false,
     }),
         useOutsideAlerter = (ref) => {
             useEffect(() => {
@@ -72,7 +30,7 @@ export default function MultiSelect({ classNameWrapper, titleClassName, onClick,
         },
         wrapperRef = useRef(null);
 
-    useOutsideAlerter(wrapperRef);
+    //useOutsideAlerter(wrapperRef);
 
     const onHandleOptionClick = (e) => {
         e.preventDefault();
