@@ -3,6 +3,53 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import './styles.css';
 
+
+/* 
+onChange & onClick:
+
+const onHandleMultiSelectOptionClick = (label, value) => {
+        let tempArr = [...state.selectedArray],
+            orginalOptArr = [...state.optionsArray];
+
+        if (state.labsAssigned.some((opt) => opt.value === value)) {
+            tempArr = tempArr.filter((opt) => opt.value !== value);
+            orginalOptArr.push({ label, value });
+        } else {
+            tempArr.push({ label, value });
+            orginalOptArr = orginalOptArr.filter((opt) => opt.value !== value);
+            if (state.selectedError) {
+                setState({ ...state, selectedError: false })
+            }
+        }
+
+        setState({ ...state, selectedArray: tempArr, optionsArray: orginalOptArr });
+    }
+
+    const onHandleMultiSelectSearchChange = (value) => {
+        let allOpts = [...state.optionsArrayDupe];
+
+        if (state.optionsArrayDupe.length !== state.optionsArray.length) {
+            allOpts = allOpts.filter((opt1) => {
+                return !state.selectedArray.find((opt2) => {
+                    return opt1.value === opt2.value
+                });
+            });
+        }
+
+        const filteredData = allOpts.filter((opt) => {
+            return opt.value.toLowerCase().includes(value.toLowerCase())
+        });
+
+        if (value === '') {
+            setState({ ...state, optionsArray: state.optionsArrayDupe })
+        } else {
+            setState({ ...state, optionsArray: filteredData })
+        }
+    }
+
+
+*/
+
 export default function MultiSelect({ classNameWrapper, titleClassName, onClick, placeholder, values, arrayOfOptions, onSearchChange, isError }) {
     const [state, setState] = useState({
         searchOptValue: '',
