@@ -1,0 +1,31 @@
+.Nav {
+    box-shadow: 0px 2px 8px 1px #c8c3c1;
+}
+
+.navbarBtn {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: box-shadow .15s ease-in-out;
+}
+
+.navbarBtn:focus {
+    outline: none !important;
+}
+
+.navList {
+    border-top: 1px solid black;
+}
+
+@media screen and (max-width:767px) {
+    .navTitle,
+    .navUserName {
+        display: none !important;
+    }
+
+    .navMobileMenuName {
+        display: inline-block !important;
+    }
+}

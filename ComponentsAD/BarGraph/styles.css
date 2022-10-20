@@ -1,0 +1,26 @@
+
+
+.legendCircle {
+    display: inline-block;
+    width: 15px;
+    height: 15px; 
+    border-radius: 50%;
+}
+
+.legendItemText {
+    font-weight: 500;
+}
+
+.legendSortSelect {
+    display: inline-block;
+    float: right
+}
+
+.barLegend {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    padding-left: 0;
+    text-align: left;
+    list-style: none;
+}

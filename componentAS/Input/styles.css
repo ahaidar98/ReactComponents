@@ -1,0 +1,116 @@
+/* Input Component Stylesheet*/
+
+.input {
+    border: none !important;
+    border-bottom: 2px solid #f1c40f !important;
+    border-bottom-right-radius: 0 !important;
+    border-radius: 5px 5px 0 0 !important;
+    caret-color: #f1c40f;
+}
+
+.form-floating {
+    margin-bottom: 1rem;
+}
+
+.input:disabled {
+    background: red;
+
+}
+
+.input:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    background-color: transparent;
+}
+
+/*MUST BE BELOW INPUT CLASS*/
+.errorInput {
+    border-color: #B00020 !important;
+}
+
+.endInputText {
+    height: calc(3.5rem + 2px);
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 0.75rem;
+    border: 2px solid #f1c40f;
+    border-right: 0;
+    border-top: 0;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 0;
+    text-align: center;
+}
+
+.prependSelect {
+    height: calc(3.5rem + 2px);
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 0.75rem;
+    border: 2px solid #f1c40f !important;
+    border-left: 0 !important;
+    border-top: 0 !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 0 !important;
+}
+
+.prependWrapper {
+    height: calc(3.5rem + 2px);
+    border-radius: 5px 0 0 0;
+}
+
+.prependInputBorderRadius {
+    border-top-left-radius: 0 !important;
+}
+
+.prependInputWidth {
+    width: 83%;
+}
+
+.prependInputWidth .prependSelect {
+    border-top-left-radius: 0 !important;
+}
+
+.prependWrapper {
+    width: 17%;
+}
+
+.wrapperDisplay {
+    display: flex;
+}
+
+.comboInputWidth {
+    min-width: 93%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .prependInputWidth {
+        width: 65%;
+    }
+
+    .prependWrapper {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .prependWrapper, .prependInputWidth {
+        width: 100%;
+    }
+
+    .wrapperDisplay {
+        display: block;
+    }
+
+    .prependSelect {
+        border-radius: 5px 5px 0 0 !important;
+        border: none !important;
+        border-bottom: 2px solid #f1c40f !important;
+    }
+
+    .prependInputBorderRadius {
+        border-radius: 5px !important;
+    }
+}

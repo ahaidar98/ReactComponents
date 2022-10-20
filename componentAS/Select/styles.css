@@ -1,0 +1,30 @@
+.select {
+    border: none;
+    border-bottom: 2px solid #f1c40f !important;
+    border-radius: 5px 5px 0 0;
+    caret-color: #f1c40f;
+    display: inline-block !important;
+    font-size: 1rem !important;
+}
+
+.select:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+/*MUST BE BELOW INPUT CLASS*/
+.errorSelect {
+    border-color: #B00020 !important;
+}
+
+.changeSelectHeight.select {
+    padding: 0rem 0.75rem !important;
+}
+
+.select[disabled] {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+}

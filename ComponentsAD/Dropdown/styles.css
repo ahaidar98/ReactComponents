@@ -1,0 +1,28 @@
+.dropdownList {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    right: 2.5%;
+    top: 5%;
+}
+
+.dropdownListItem {
+    list-style: none;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0,0,0, .4);
+}
+
+.dropdownListItem:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}

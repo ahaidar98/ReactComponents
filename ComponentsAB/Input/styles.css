@@ -1,0 +1,110 @@
+/* Input Component Stylesheet*/
+
+.input:-internal-autofill-selected {
+    background-color: #F2F5FA !important
+}
+
+.input {
+    border: none !important;
+    border-bottom: 2px solid #f1c40f !important;
+    border-radius: 5px 5px 0 0 !important;
+    caret-color: #f1c40f;
+}
+
+.input:disabled {
+    background: red;
+
+}
+
+.input:focus {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+/*MUST BE BELOW INPUT CLASS*/
+.errorInput {
+    border-color: #903b41 !important;
+}
+
+.endInputText {
+    height: calc(3.5rem + 2px);
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 0.75rem;
+    border: 2px solid #f1c40f;
+    border-right: 0;
+    border-top: 0;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 0;
+    text-align: center;
+}
+
+.preInputText {
+    height: calc(3.5rem + 2px);
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 1rem 0.75rem;
+    border: 2px solid #f1c40f;
+    border-left: 0;
+    border-top: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0;
+    text-align: center;
+}
+
+
+.textInputBorderRadius {
+    border-top-right-radius: 0 !important;
+}
+
+.comboInputWidth {
+    min-width: 93%;
+}
+
+.comboInputWidth .prependText {
+    border-top-left-radius: 0 !important;
+}
+
+.wrapperDisplay {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .comboInputWidth {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .comboInputWidth {
+        max-width: 75% !important;
+        min-width: 75% !important;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width: 1023px) {
+    .comboInputWidth {
+        max-width: 85% !important;
+        min-width: 85% !important;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .prependWrapper, .comboInputWidth {
+        width: 100%;
+    }
+
+
+    .prependText {
+        border-radius: 5px 5px 0 0 !important;
+        border: none !important;
+        border-bottom: 2px solid #f1c40f !important;
+    }
+
+    .prependInputBorderRadius {
+        border-radius: 5px !important;
+    }
+}

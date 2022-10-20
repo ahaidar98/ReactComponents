@@ -1,0 +1,9 @@
+.toastHeader {
+    color: white !important;
+    border-color: black;
+    padding-bottom: 0 !important;
+}
+
+.toastTitle {
+    display: inline-block;
+}

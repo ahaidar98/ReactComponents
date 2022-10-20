@@ -1,0 +1,7 @@
+.Nav {
+    box-shadow: 0px 2px 8px 1px #c8c3c1;
+}
+
+.navbarBtn:focus {
+    outline: none !important;
+}

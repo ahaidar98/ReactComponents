@@ -1,0 +1,8 @@
+.toastHeader {
+    border-bottom: 1px solid #fff;
+}
+
+#notificationToast .toast {
+    border-radius: 5px;
+    border: none;
+}

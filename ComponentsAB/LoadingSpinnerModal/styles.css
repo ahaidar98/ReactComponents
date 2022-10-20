@@ -1,0 +1,49 @@
+#spinningModal {
+    display: inline-block;
+    background: rgba(0,0,0,.55) !important;
+}
+
+#spinningModal .modal-body {
+    overflow-y: hidden;
+}
+
+.closeBtn {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: none;
+    padding: 0 10px 3px 10px;
+    font-size: 1.5rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.modal-body {
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
+}
+
+#spinningModal .modal-dialog {
+    max-width: 335px !important;
+    text-align: center;
+    /* height: 160px !important; */
+    /* max-height: 160px !important; */
+    /* min-height: 160px !important; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:576px) {
+    #spinningModal .modal-dialog {
+        max-width: 550px !important;
+    }
+}
